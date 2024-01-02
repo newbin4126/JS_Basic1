@@ -90,10 +90,10 @@ isNicoFat2 = false;
 /*대부분 const를 사용하되
 업데이트가 필요하다면 let을사용하고
 var은 무슨일이 있어도 사용 금지
-var을 사용하면const와 let을 구분할 수 없게 된다*/
+var을 사용하면const와 let을 구분할 수 없게 된다
 
 
-//강의10-12
+//강의10
 
 const player = {
     name:"nico",
@@ -102,7 +102,40 @@ const player = {
 
 console.log(player);
 player.name = "nicolas"
-console.log(player);
+console.log(player); 
+
+
+//강의11
+
+const age = 98;
+function calcuateKrAge(ageOfForeigner){
+    return ageOfForeigner + 2;
+}
+
+const krAge = calculateKrAge(96);
+
+console.log(kr.Age);
+
+//강의12(이론)
+
+//강의13
+const age = prompt("How old are you?")//자바스크립트는 이 명령어에서 우릴 기다리고있음(아무것도 입력하지 읺으면 아무일도 일어나지 않음)
+//prompt는 사용자에게 창을 띄울 수 있도록 해줌 
+//브라우저로 할 수 있는 가장 직접적인 방법
+//이 방법은 창을 마음대로 디자인 불가능, 팝업을 지원하지 않는 브라우저도 있어서 사용하지 않음
+
+
+console.log(typeof "15",typeof parseInt("15"));//15의 문자형태, 그리고 숫자로 바꾼 15의 형태를 로그에 출력
+parseInt("15");//String을 number로 변환
+*/
+
+
+//강의14
+const age = parseInt(prompt("How old are you?"));
+
+console.log(isNaN(age)); 
+//isNaN 하나의 인자를 주면 이게number인지 알려줌
+//NaN은 boolean을 반환해줌
 
 
 
