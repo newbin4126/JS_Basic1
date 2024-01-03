@@ -127,22 +127,51 @@ const age = prompt("How old are you?")//자바스크립트는 이 명령어에�
 
 console.log(typeof "15",typeof parseInt("15"));//15의 문자형태, 그리고 숫자로 바꾼 15의 형태를 로그에 출력
 parseInt("15");//String을 number로 변환
-*/
+
 
 
 //강의14
 const age = parseInt(prompt("How old are you?"));
 
-console.log(isNaN(age)); 
+console.log(isNaN(age)); */
 //isNaN 하나의 인자를 주면 이게number인지 알려줌
 //NaN은 boolean을 반환해줌
 
 
+//강의 3-0
+/*크롬 콘솔에서 
+document.title="뉴빈이"
+이렇게 입력하면 HTML을 거치지 않고 창의 이름을 뉴빈이로 바꿀 수 있음
+자바스크립트는 HTML에 이미 연결되어어 있다
+
+//강의 3-1
+//이 강의에서 배우는건 정말 정말 정말 정말 많이 사용한다함
+document.getElementById("title")//String을 전달받는 함수
+//콘솔에 이렇게 입력하면 null이 나옴
+//html body안에 id="title"을 가진 항목이 없어서
+
+const title = document.getElementById("title");
+
+console.dir(title);//dir은 element를 더 자세하게 보여줌
 
 
+//강의3-2
+const hellos =  document.getElementsByClassName("hello");//hellos라는 변수 정의
 
+console.log(hellos);
 
+const title = document.querySelector(".hello h1");
+//querySelector는 element를 css방식으로 검색 가능
 
+getElementsByClassName("hello");
+//querySelector에는 hello가 class name 이라는 것과 그 안의 h1s을 명시해줘야 함
 
+console.log(title);*/
 
+//강의 3-3 ~5
 
+const title = document.querySelector(".hello:fiorst-child h1");
+ 
+console(title);
+
+title.innerText = "Hello";
