@@ -166,12 +166,71 @@ const title = document.querySelector(".hello h1");
 getElementsByClassName("hello");
 //querySelector에는 hello가 class name 이라는 것과 그 안의 h1s을 명시해줘야 함
 
-console.log(title);*/
+console.log(title);
 
-//강의 3-3 ~5
+//강의 3-3
 
 const title = document.querySelector(".hello:fiorst-child h1");
  
 console(title);
 
 title.innerText = "Hello";
+
+//강의 3-4
+
+const title = document.querySelector("div.hello:first-child h1");
+
+console.dir(title);
+
+function handleTitleClick(){
+    title.computedStyleMap.color = "blue";
+}
+
+function handleMouseEnter(){
+    title.innerText="Mouse id here!";
+}
+
+function handMouseLeave(){
+    title.innerText = "Mouse is gone!";
+}
+
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
+
+function handleWindowcopy(){
+    alert("copier!");
+}
+
+h1.addEventListener("click", handleTitleClick);
+h1.addEventListener("mouseenter",handleMouseEnter);
+h1.addEventListener("mouseleave",handMouseLeave);
+
+//강의 3-5
+window.addEventListener("resize",handleWindowResize);
+window.addEventListener("copy",handleWindowcopy);*/
+
+//강의 3-6
+
+function handleTitleClick(){
+    const currentColor = h1.style.color;
+    let newColor;
+    if(h1.currentColor === "blue"){
+        h1.newColor="tomato";
+    } else {
+        h1.newColor="blue";
+    }
+    h1.style.color = newColor;
+}
+
+h1.addEventListener("click",handleTitleClick);
+
+//강의 3-7
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick(){
+    h1.className="active"; 
+}
+
+h1.addEventListener("click", handleTitleClick);
